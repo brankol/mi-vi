@@ -3,6 +3,9 @@ A scoring app for the card game Bela.
 It serves as a playground for experimenting with different JavaScript tools.
 It will be implemented as a mobile-first progressive web app.
 
+## Wireframe
+[[https://github.com/brankol/mi-vi/blob/master/wireframes/main.png|alt=wireframe]]
+
 ## Proposed data model
         {
             weAre: 'Mi',
