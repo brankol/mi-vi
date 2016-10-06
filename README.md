@@ -4,7 +4,7 @@ It serves as a playground for experimenting with different JavaScript tools.
 It will be implemented as a mobile-first progressive web app.
 
 ## Wireframe
-[[https://github.com/brankol/mi-vi/blob/master/wireframes/main.png|alt=wireframe]]
+![main wireframe](https://github.com/brankol/mi-vi/blob/master/wireframes/main.png)
 
 ## Proposed data model
         {
