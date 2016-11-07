@@ -1,6 +1,6 @@
 var React = require('react');
 
-var PlayersHeader = React.createClass({
+var PlayersName = React.createClass({
     render: function() {
         return (
             <div className="players-header">{this.props.name}</div>
@@ -8,4 +8,4 @@ var PlayersHeader = React.createClass({
     }
 });
 
-module.exports = PlayersHeader;
+module.exports = PlayersName;
