@@ -1,7 +1,7 @@
 var React = require('react');
 var Score = require('../components/Score');
 
-var ScoresListContainer = React.createClass({
+var ScoresList = React.createClass({
     render: function() {
         return (
             <div className="scores-list">                 
@@ -13,4 +13,4 @@ var ScoresListContainer = React.createClass({
     }
 });
 
-module.exports = ScoresListContainer;
+module.exports = ScoresList;
