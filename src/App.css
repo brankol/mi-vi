@@ -1,17 +1,67 @@
 html,
 * {
-    box-sizing: padding-box;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #2c3e50;
 }
 
-.players-table {
-    width: 46%;
+.col-left {
     float: left;
+    width: 50%;
+}
+
+.col-right {
+    float: left;
+    width: 50%;
+}
+
+.score-row::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.score-row:hover .score-delete {
+    display: block;
+}
+
+.score-delete {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    height: 43px;
+    border: none;
+    color: red;
+    width: 70px;
+}
+
+.score-row {
+    position: relative;
+}
+
+.score {
+    float: left;
+    padding: 10px;
+    width: 50%;
+    margin: 20px 0;
+    float: left;
+    color: white;
+    font-family: monospace;
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    background-color: #49556f;
+    border: 10px solid #71d4e6;
+}
+
+.players-table {
     padding: 2%;
-    padding-bottom: 100px;
+    /*padding-bottom: 100px;*/
     position: relative;
 }
 
@@ -52,13 +102,6 @@ body {
 .green-box {
     background-color: #49556f;
     border: 10px solid #71d4e6;
-}
-
-.score {
-    padding: 10px;
-    margin-bottom: 15px;
-    width: 80%;
-    margin: 20px auto;
 }
 
 .score-add-popup {

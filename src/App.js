@@ -1,15 +1,14 @@
 import './App.css';
 var React = require('react');
-var AppHeaderContainer = require('./containers/AppHeaderContainer');
-var GameTableContainer = require('./containers/GameTableContainer');
+var Header = require('./components/Header');
+var GameSets = require('./components/GameSets');
 
 var App = React.createClass({
     render: function() {
         return (
             <div className="app-wrap">
-				<AppHeaderContainer/>
-				<GameTableContainer name={"we"}/>
-				<GameTableContainer name={"you"}/>			 
+				<Header/>
+				<GameSets/>
 			</div>
         )
     }
