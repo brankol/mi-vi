@@ -1,4 +1,5 @@
 var React = require('react');
+var _CONST = require('../consts');
 
 var AddGameDialog = React.createClass({
     getInitialState: function() {
@@ -42,8 +43,8 @@ var AddGameDialog = React.createClass({
                                         </div>
                                         <div className="col-r">
                                             <input type="text" onChange={this.onGameTotalChange}/>
-                                            <input type="text" onChange={this.onNewPointChange.bind(this, 'we')}/>
-                                            <input type="text" onChange={this.onNewPointChange.bind(this, 'you')}/>
+                                            <input type="text" onChange={this.onNewPointChange.bind(this, _CONST.WE)}/>
+                                            <input type="text" onChange={this.onNewPointChange.bind(this, _CONST.YOU)}/>
                                         </div> 
                                         <button onClick={this.onNewScoreSubmit}>Ok</button>  
                                     </div>

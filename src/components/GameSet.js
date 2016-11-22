@@ -5,7 +5,7 @@ var _CONST = require('../consts');
 var gamesById = require('../models/gamesById');
 var setsById = require('../models/setsById');
 
-var GameSets = React.createClass({
+var GameSet = React.createClass({
     getInitialState: function() {
         return {
             gamesById: gamesById
@@ -35,7 +35,12 @@ var GameSets = React.createClass({
                             </div>
                         ) 
                 })}
-                <AddGameDialog onAddSubmit={this.handleOnAddSubmit}/> 
+                <div className="col-left">
+                    <AddGameDialog onAddSubmit={this.handleOnAddSubmit}/> 
+                </div>
+                <div className="col-right">
+                    <AddGameDialog onAddSubmit={this.handleOnAddSubmit}/>
+                </div>
             </div>
         )
     }
@@ -56,4 +61,4 @@ function getNewSet(gamesById, newPoints) {
     }
 }
 
-module.exports = GameSets;
+module.exports = GameSet;
