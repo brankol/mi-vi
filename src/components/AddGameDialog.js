@@ -4,18 +4,19 @@ var _CONST = require('../consts');
 var AddGameDialog = React.createClass({
     getInitialState: function() {
         return {
-            showAddPoint: false,
-            we: 0,
-            you: 0,
-            total: 0
+            showAddPoint: false
         }
     },
     onOpenAddScore: function() {
         this.setState({ showAddScore: true });
     },
     onNewScoreSubmit: function() {
-        this.props.onAddSubmit(this.state);
-        this.setState({ showAddScore: false });
+        if (this.state.total === undefined) {
+            alert("total === undefined");
+        } else {
+            this.props.onAddSubmit(this.state);
+            this.setState({ showAddScore: false });
+        }
     },
     onNewPointChange: function(name, e) {
         var change = {};
@@ -38,13 +39,11 @@ var AddGameDialog = React.createClass({
                                     <div className="score-add-popup green-box">
                                         <div className="col-l">
                                             <label htmlFor="game total">Game total:</label>
-                                            <label htmlFor="game point">Mi:</label>
-                                            <label htmlFor="game point">Vi:</label>
+                                            <label htmlFor="game point">{this.props.players}:</label>
                                         </div>
                                         <div className="col-r">
                                             <input type="text" onChange={this.onGameTotalChange}/>
-                                            <input type="text" onChange={this.onNewPointChange.bind(this, _CONST.WE)}/>
-                                            <input type="text" onChange={this.onNewPointChange.bind(this, _CONST.YOU)}/>
+                                            <input type="text" onChange={this.onNewPointChange.bind(this, this.props.players)}/>
                                         </div> 
                                         <button onClick={this.onNewScoreSubmit}>Ok</button>  
                                     </div>
@@ -57,9 +56,8 @@ var AddGameDialog = React.createClass({
 });
 
 AddGameDialog.propTypes = {
-    onAddSubmit: React.PropTypes.func.isRequired
-
+    onAddSubmit: React.PropTypes.func.isRequired,
+    players: React.PropTypes.string.isRequired
 };
-
 
 module.exports = AddGameDialog;
